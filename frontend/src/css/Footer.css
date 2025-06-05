@@ -1,0 +1,113 @@
+/* Footer Styles */
+.custom-footer {
+  background-color: #0056b3; /* Deep blue color */
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 120px;
+  flex-wrap: wrap; /* Responsive layout */
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 300px; /* Ensure consistent column width */
+  text-align: left;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center; /* Ensure the text is centered */
+  margin-right: 20px; /* Shift text slightly to the right */
+}
+
+.footer-column p,
+.footer-column a {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  margin: 0 15px;
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 30px;
+  }
+
+  .footer-column {
+    max-width: 100%; /* Allow full width for smaller screens */
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.footer-icon:hover {
+  color: #f0f0f0;
+}
+
+.footer-contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #004aad; /* Match the theme */
+  border-radius: 50%;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  background-color: #003580;
+  transform: scale(1.1);
+}
+

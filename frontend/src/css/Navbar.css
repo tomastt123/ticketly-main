@@ -1,0 +1,193 @@
+/* General Navbar Styles */
+.navbar {
+  background-color: #007bff; /* Blue */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 60px;
+  z-index: 1000;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Add spacing between buttons */
+  padding-right: 50px;
+}
+
+.navbar-team-dropdown select {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  width: 6.4rem;
+}
+
+.navbar-team-dropdown select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.create-team-button {
+  background-color: white;
+  color: #007bff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 30px;
+}
+
+.create-team-button:hover {
+  background-color: green; /* Darker blue */
+  color: white;
+}
+
+.logout-button {
+  background-color: white;
+  color: #007bff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 30px;
+}
+
+.logout-button:hover {
+  background-color: red; /* Darker blue */
+  color: white;
+}
+
+.navbar-logo {
+  height: 35px;
+  padding-left: 30px;
+}
+
+.manage-teams-button {
+  background-color: white;
+  color: #007bff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 30px;
+}
+
+.manage-teams-button:hover {
+  background-color: #0056b3; /* Darker blue */
+  color: white;
+}
+
+/* Burger Menu Button */
+.burger-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 15px; /* Adjust burger button alignment */
+}
+
+/* Mobile Burger Menu */
+@media (max-width: 768px) {
+  .burger-menu-button {
+    display: block; /* Show burger menu on mobile */
+    margin-right: 50px;
+  }
+
+
+  .navbar-actions {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 80px; /* Below navbar */
+    right: 9%;
+    width: 40%; /* 80% width for mobile */
+    padding: 10px 15px;
+    z-index: 1000;
+    border-radius: 10px; /* Rounded edges for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+
+  .navbar-actions.mobile-menu-open {
+    display: flex; /* Show when menu is open */
+  }
+
+  .navbar-actions button,
+  .navbar-actions a 
+  {
+    width: 200px; /* Full width for all buttons */
+    height: 50px;
+    font-size: 1rem;
+    background-color: white;
+    color: #007bff;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+
+  .navbar-actions button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+
+  .mobile-only {
+    display: block; /* Show mobile-only buttons */
+  }
+
+  .navbar-actions a:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+}
+
+/* Desktop-only Styles */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none; /* Hide mobile-only buttons for desktop */
+  }
+}
+
+/* Styles for Dashboard and Profile Buttons */
+.profile-button,
+.dashboard-button {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px 0; /* Add spacing between these buttons */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-button:hover,
+.dashboard-button:hover {
+  background-color: #0056b3;
+  color: white;
+}

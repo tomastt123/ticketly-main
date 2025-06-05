@@ -1,0 +1,253 @@
+/* General container */
+.teams-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-image: radial-gradient(grey 0.4px, transparent 1px);
+  background-size: 35px 35px;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  padding-top: 150px;
+}
+
+/* Card styling */
+.teams-details-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Left section: Photo */
+.teams-photo-section {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align items vertically */
+}
+
+.teams-photo-section img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* Space between the image and the button */
+}
+
+.teams-photo-section .teams-custom-file-input {
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.teams-photo-section .teams-custom-file-input:hover {
+  background-color: #0056b3;
+}
+
+.teams-photo-section input[type="file"] {
+  display: none;
+}
+/* Right section: Details */
+.teams-details-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teams-description,
+.teams-members-section,
+.teams-add-member-section {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teams-description h3,
+.teams-members-section h3,
+.teams-add-member-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Members list */
+.teams-members-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.teams-members-section li {
+  display: flex;
+  justify-content: space-between; /* Ensure spacing between name, role, and button */
+  align-items: center; /* Align items vertically */
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.teams-members-section li strong {
+  flex: 2; /* Name takes up 2 parts of the row */
+  font-size: 1rem;
+  color: #333;
+}
+
+.teams-members-section li span {
+  flex: 1; /* Ensure the role takes up equal space */
+  text-align: left; /* Align text to the left */
+  padding-left: 10px; /* Add some spacing from the left edge */
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.teams-members-section li button {
+  flex: 0; /* Allow button to shrink to fit content */
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  transition: background-color 0.3s ease;
+  margin-left: 200px;
+}
+
+.teams-members-section li button:hover {
+  background-color: #0056b3;
+}
+
+/* Add Member Section */
+.teams-add-member-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.teams-add-member-section input,
+.teams-add-member-section select,
+.teams-add-member-section button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.teams-add-member-section button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.teams-add-member-section button:hover {
+  background-color: #1c7a31;
+}
+
+/* Circular image style for uploaded photos */
+.team-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: block;
+}
+
+/* Circular placeholder if no photo is available */
+.team-photo-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px dashed #ccc;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teams-details-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .teams-add-member-section input[type="email"] {
+    width: 92%;
+  }
+
+  .teams-details-content {
+    width: 100%;
+  }
+
+  .teams-description {
+    margin-top: 20px;
+  }
+
+  .teams-members-section ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+  }
+
+    .teams-members-section li {
+      position: relative; /* Ensure the button is positioned relative to the card */
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Vertically align items */
+      flex-wrap: wrap; /* Allow content to wrap */
+      padding: 10px;
+      border-bottom: 1px solid #ddd; /* Optional: Add separator */
+      gap: 5px; /* Add space between elements */
+    }
+
+    .teams-members-section li strong {
+      flex-basis: 100%; /* Make the name span the full width */
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .teams-members-section li span {
+      flex-basis: 70%; /* Role takes 70% of the width */
+      font-size: 0.9rem;
+      color: #555; /* Optional: Add subtle color for the role */
+    }
+
+    .teams-members-section li button {
+      position: absolute;
+      top: 10px; /* Position at the top */
+      right: 10px; /* Position at the right */
+      padding: 5px 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .teams-members-section li button:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+    }
+  }

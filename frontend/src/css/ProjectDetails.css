@@ -1,0 +1,570 @@
+.project-details-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f9fc;
+    background-image: radial-gradient(grey 0.4px, transparent 1px); /* Blue dots */
+    background-size: 35px 35px; /* Adjust the distance between dots */
+    padding-left: 280px;
+    width: 85%;
+  }
+  
+  .project-details-content {
+    flex-grow: 1;
+    padding: 20px;
+    width: 90%;
+  }
+  
+  .project-details-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-top: 100px; /* Spacing below navbar */
+  }
+  
+  .project-name-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .project-name {
+    font-size: 2rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .status-section {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .status-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .status-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+  }
+  
+  .add-bug-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 17rem;
+  }
+  
+  .add-bug-button:hover {
+    background-color: #218838;
+  }
+  
+  .add-bug-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 95.5rem;
+  }
+  
+  .bug-form-input {
+    display: grid;
+    width: 93.5rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  
+  .form-select {
+    width: 94.8rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+  }
+  
+  .submit-bug-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-bug-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .bug-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bug-header {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .bug-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .comment-textarea {
+    width: 97%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-comment-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-comment-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .comments-section {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .comment {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+
+
+  /* ASK AI*/
+  .ask-ai-button {
+    margin-top: 10px;
+    background-color: #6c757d; /* Gray button */
+    color: white;
+    padding: 10px 15px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ask-ai-button:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+  }
+  
+.ai-suggestion-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.ai-suggestion {
+  background: #eef2ff; /* Light blue background */
+  border-left: 5px solid #6366f1; /* Blue accent */
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 90%;
+  font-size: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ai-suggestion p {
+  margin: 0;
+  color: #1e3a8a; /* Dark blue text */
+}
+
+.ai-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.submit-ai-button,
+.decline-ai-button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-ai-button {
+  background-color: #22c55e; /* Green */
+  color: white;
+}
+
+.submit-ai-button:hover {
+  background-color: #16a34a;
+  box-shadow: 0px 2px 6px rgba(34, 197, 94, 0.5);
+}
+
+.decline-ai-button {
+  background-color: #ef4444; /* Red */
+  color: white;
+}
+
+.decline-ai-button:hover {
+  background-color: #dc2626;
+  box-shadow: 0px 2px 6px rgba(239, 68, 68, 0.5);
+}
+
+.save-btn {
+  background-color: #22c55e;
+  color: white;
+  height: 30px;
+  margin-right: 10px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #16a34a;
+}
+
+ /* Edit Button */
+ button.edit-btn {
+  background-color: #ffc107;
+  height: 30px;
+  margin-right: 10px;
+  color: #000;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+button.cancel-btn {
+  background-color: #dc3545;
+    margin-right: 10px;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3sease-in-out;
+}
+
+
+/* Delete Button */
+button.delete-btn {
+  background-color: #dc3545;
+  margin-right: 10px;
+  height: 30px;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-image-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(255, 0, 0, 0.7);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  z-index: 100;
+}
+
+.user-link {
+  text-decoration: none;
+  color: inherit; /* Ensures it doesn't have the default link color */
+  font-weight: bold;
+}
+
+/* Upload File Input */
+input.upload-file {
+  font-size: 12px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input.upload-file:hover {
+  background-color: #e9ecef;
+  }
+
+  /* Hide the default file input */
+input.upload-file {
+  display: none;
+}
+
+/* Style the label to look like a button */
+label.custom-file-upload {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+label.custom-file-upload:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Style for uploaded file text (if needed) */
+.custom-file-upload + input::file-selector-button {
+  display: none;
+}
+
+/* Thumbnails container for bug images (or comment images) */
+.bug-images-thumbnails,
+.comment-images-thumbnails {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+/* Thumbnail style */
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+  /* Container adjustments for mobile */
+  .project-details-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Reduce padding to ensure content fits */
+    gap: 10px; /* Add spacing between sections */
+    margin-left: 20px;
+  }
+
+  .project-details-content {
+    width: 100%; /* Full width */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Align content to the edges */
+  }
+
+  .project-details-wrapper {
+    width: 100%;
+    padding: 10px; /* Add a bit of internal spacing */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+  }
+
+  .project-name,
+  .project-description {
+    font-size: 1rem; /* Adjust font size */
+    margin-bottom: 10px; /* Add space between elements */
+  }
+
+  .status-section {
+    width: 90%; /* Fit the screen */
+    margin: 0; /* Align to the left */
+  }
+
+  .status-header {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .status-dropdown {
+    width: 100%; /* Full width dropdown */
+    padding: 8px; /* Adjust padding for comfort */
+  }
+
+  .add-bug-button {
+    width: 100%; /* Full width button */
+    padding: 12px;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .add-bug-form {
+    width: 100%; /* Ensure form fits */
+    padding: 10px; /* Add some spacing */
+  }
+
+  .bug-form-input{
+    width: 90%; /* Full width inputs */
+    margin-bottom: 10px; /* Space between inputs */
+  }
+
+  .form-select {
+    width: 96%;
+  }
+
+  .submit-bug-button {
+    width: 95%; /* Full width submit button */
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .bug-card {
+    width: 100%; /* Full width for bug cards */
+    margin-bottom: 20px; /* Space between cards */
+    padding: 10px; /* Internal spacing */
+  }
+
+  .bug-header h3 {
+    font-size: 1rem;
+  }
+
+  .bug-text,
+  .bug-created-by {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .comments-section {
+    width: 95%; /* Full width comments */
+    padding: 10px;
+  }
+
+  .comment {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    width: 85%; /* Ensure comment spans full width */
+  }
+
+  .comment-textarea {
+    width: 90%; /* Full width textarea */
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .add-comment-button {
+    width: 95%; /* Full width button */
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .ask-ai-button {
+    width: 95%; /* Full width button */
+    padding: 12px;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  .input.upload-file {
+    margin-top: 15px;
+  }
+
+  label.custom-file-upload {
+    margin-top: 15px;
+  }
+}

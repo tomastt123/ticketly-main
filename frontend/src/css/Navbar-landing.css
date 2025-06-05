@@ -1,0 +1,119 @@
+/* General Navbar Styles */
+.landing-page-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #007bff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.landing-page-navbar-logo {
+  width: 7.5rem;
+}
+
+.landing-page-navbar-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page-navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.landing-page-navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.landing-page-navbar-buttons .desktop-login-btn {
+  background-color: white; /* White background for desktop view */
+  color: black; /* Black text */
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.landing-page-navbar-buttons .desktop-login-btn:hover {
+  background-color: #0056b3; /* Dark blue on hover */
+  color: white; /* White text on hover */
+}
+
+.landing-page-btn.get-started {
+  color: white;
+}
+
+.landing-page-btn.login {
+  background-color: white;
+  color: black;
+}
+
+/* Hamburger Menu Button */
+.landing-page-navbar-hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .landing-page-navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .landing-page-navbar-menu.open {
+    display: flex;
+  }
+
+  .landing-page-navbar-menu li {
+    margin: 10px 0;
+  }
+
+  .landing-page-navbar-buttons {
+    display: none; /* Hide desktop buttons on mobile */
+  }
+
+  .landing-page-navbar-hamburger {
+    display: block; /* Show hamburger button on mobile */
+  }
+
+  .landing-page-navbar-menu .mobile-only {
+    display: block; /* Show additional links only on mobile */
+  }
+
+  .desktop-only {
+    display: none !important; /* Hide desktop buttons on mobile */
+  }
+}
+
+/* Desktop-specific Styling */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important; /* Hide additional links on desktop */
+  }
+}

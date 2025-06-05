@@ -1,0 +1,519 @@
+/* General Layout */
+.flex {
+  display: flex;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: 35px 35px; /* Keep dot pattern */
+  min-height: 100vh; /* Full page height */
+}
+
+/* Default light mode variables */
+:root {
+  --background-color: #f7f9fc;
+  --background-image: radial-gradient(grey 0.4px, transparent 1px);
+}
+
+/* Dark mode overrides */
+.dark-mode {
+  --background-color: #121212;
+  --background-image: radial-gradient(#444 0.4px, transparent 1px);
+}
+
+.flex-grow {
+  flex-grow: 1;
+  padding: 20px;
+  padding-left: 280px;
+}
+
+/* Navbar and Sidebar should stay as is */
+
+/* Header */
+.text-2xl {
+  font-size: 1.875rem; /* Adjust for a sleek look */
+  font-weight: 700;
+  color: #2a3f54; /* Dark blue color for titles */
+}
+
+.mb-4 {
+  margin-top: 20px;
+  max-width: 600px; /* Optional limit for form width */
+}
+
+
+/* Buttons */
+.details-button {
+  background-color: #007bff;
+  color: #ffffff;
+  margin-right: 20px;
+  height: 32px;
+  border-radius: 6px;
+  border-color: #0056b3;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 110px;
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  height: 32px;
+  background-color: #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 110px;
+}
+
+.delete-button:hover {
+  background-color: red;
+}
+
+.bg-blue-500 {
+  background-color: #007bff; /* Blue */
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.bg-blue-500:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.bg-green-500 {
+  background-color: #28a745; /* Green */
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.bg-green-500:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.bug-container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bug-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bug-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Forms */
+
+.form-container {
+  margin-top: 20px; /* Space between buttons and form */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+form {
+  background-color: #ffffff; /* White form background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 34.6rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff; /* Blue focus */
+  outline: none;
+}
+
+/* Mobile-specific styles */
+
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 98%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-input-field {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+ .project-input-field-name {
+  max-width: 35rem;
+  width: 19rem;
+ }
+}
+
+@media (max-width: 768px) {
+  .project-input-field-description {
+   max-width: 35rem;
+   width: 21rem;
+  }
+ }
+
+@media (max-width: 768px) {
+  .team-dropdown {
+    max-width: 22.2rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  form {
+    max-width: 90%; /* Adjust width for mobile */
+    padding: 15px; /* Reduce padding for a more compact layout */
+  }
+
+  input[type="text"],
+  textarea {
+    padding: 8px; /* Smaller padding for inputs */
+    width: 21rem;
+  }
+
+  .submit-button {
+    padding: 8px 15px; /* Smaller button padding */
+    font-size: 0.9rem; /* Adjust button text size */
+  }
+}
+
+/* Projects Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Ensure 3 projects per row */
+  gap: 20px;
+}
+
+/* Project Card */
+.bg-white {
+  background-color: #ffffff; /* White card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px; /* Fixed card width */
+}
+
+.bg-white:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.text-xl {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2a3f54; /* Darker blue */
+}
+
+.text-blue-600 {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.text-blue-600:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+}
+
+.popup-content button {
+  margin: 0 10px;
+}
+
+/* Dropdown */
+.team-dropdown {
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #374151;
+  transition: border-color 0.3s ease;
+  margin-bottom: 20px;
+  width: 36rem;
+}
+
+.team-dropdown:hover {
+  border-color: #007bff;
+}
+
+.team-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Project Description Text */
+.project-description-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.team-name-text {
+  font-weight: 500;
+}
+
+.project-status {
+  font-weight: 500;
+}
+
+/* Input Fields */
+
+.project-input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input.project-input-field {
+  width: 35rem;
+}
+
+textarea.project-input-field {
+  width: 35rem;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.create-project-button {
+  width: 20rem;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-project-button:hover {
+  background-color: #0056b3;
+}
+
+.project-card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 22rem;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+/* Three Dots Menu */
+.three-dots-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.three-dots-menu button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+.color-picker-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Team Dropdown */
+.dashboard-team-dropdown {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  align-items: center;
+  margin-left: auto; /* Push to the right */
+  gap: 10px; /* Add spacing between elements */
+}
+
+.dashboard-team-dropdown label {
+  display: none; /* Hide the label for a cleaner look */
+}
+
+.dashboard-team-dropdown select {
+  appearance: none;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  padding: 8px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Adjust width dynamically */
+  text-align: center;
+}
+
+.dashboard-team-dropdown option {
+  text-align: left; /* Ensure options are aligned to the left */
+}
+
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Space below actions */
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column for smaller screens */
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row for medium mobile screens */
+  }
+}
+
+/* Default layout for larger screens (desktop) */
+.flex-grow {
+  flex-grow: 1;
+  padding: 20px;
+  padding-left: 280px; /* Sidebar space for desktop */
+}
+
+/* Responsive layout for mobile (screens below 768px) */
+@media (max-width: 768px) {
+  .flex-grow {
+    padding: 20px;
+    padding-left: 20px; /* Remove excessive left padding for mobile */
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  /* Project Cards (Smaller for Mobile) */
+  .project-card {
+    width: 90%; /* Take full width of the container */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    padding: 15px; /* Smaller padding */
+    margin-bottom: 15px; /* Reduce spacing between cards */
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+
+  /* Buttons Adjustments */
+  .create-project-button,
+  .dashboard-team-dropdown select {
+    width: 11rem; /* Adjust for side-by-side alignment */
+    font-size: 0.9rem; /* Smaller font for mobile */
+    padding: 8px 10px; /* Compact padding */
+  }
+
+  /* Align Buttons in Mobile */
+  .dashboard-actions {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: space-between; /* Add spacing between buttons */
+  }
+}
+
+@media (max-width: 768px) {
+  .delete-button {
+    width: 130px;
+  }
+}

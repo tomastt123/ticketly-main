@@ -1,0 +1,33 @@
+.piechart-div {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.status-chart, 
+.priority-chart, 
+.team-chart {
+    text-align: center; /* Centers the h3 and chart */
+    margin: 20px 0;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .piechart-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .status-chart, 
+    .priority-chart, 
+    .team-chart {
+        width: 100%;
+    }
+    
+    /* Optional: Make charts smaller on mobile */
+    .recharts-wrapper {
+        width: 100% !important;
+    }
+}

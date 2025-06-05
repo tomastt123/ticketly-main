@@ -1,0 +1,104 @@
+/* General container for the page */
+.create-teams-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(grey 0.4px, transparent 1px); /* Blue dots */
+    background-size: 35px 35px;    font-family: 'Arial', sans-serif;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .create-teams-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .create-teams-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2a3f54;
+  }
+  
+  /* Form styling */
+  .create-teams-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input field styling */
+  .create-teams-input,
+  .create-teams-textarea {
+    width: 27.5rem;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  input.create-teams-input {
+    width: 27.5rem;
+  }
+
+
+  .create-teams-input:focus,
+  .create-teams-textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .create-teams-submit-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-teams-submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Success and error messages */
+  .create-teams-error {
+    color: #ff4d4f;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .create-teams-success {
+    color: #28a745;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .create-teams-textarea {
+      width: 90%;
+    }
+
+      input[type="text"], textarea {
+          font-size: 0.9rem;
+          padding: 8px;
+      }
+
+    .create-teams-submit-button {
+      width: 290px;
+    }
+  }

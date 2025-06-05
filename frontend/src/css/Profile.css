@@ -1,0 +1,265 @@
+/* Profile Page Styles */
+.profile-container {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .profile-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 600px;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .profile-form {
+    width: 90%;
+  }
+  
+  .profile-form input,
+  .profile-form button {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
+  .profile-form input:focus {
+    border-color: #0747a6;
+    outline: none;
+  }
+  
+  .profile-form button {
+    background: #0052cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+  }
+  
+  .profile-form button:hover {
+    background: #0747a6;
+  }
+  
+  
+  .profile-photo-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .profile-photo-section input {
+    display: none;
+  }
+  
+  .profile-photo-section label {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0052cc;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .profile-photo-section label:hover {
+    background: #0747a6;
+  }
+  
+  .profile-photo-section button {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 38px;
+  }
+  
+  .profile-photo-section button:hover {
+    background: #d32f2f;
+  }
+  
+  .team-section {
+    margin-top: 20px;
+  }
+  
+  .team-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .team-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .team-section ul li {
+    background: #f4f6ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .profile-photo {
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #ddd;
+  }
+
+  .blue-button {
+    background: #5c6bc0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .blue-button:hover {
+    background: #3f51b5;
+  }
+  
+  .small-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+/* Profile Details Section */
+.profile-details {
+  margin-top: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-details p:first-of-type {
+  margin-top: 0;
+}
+
+.profile-details p:last-of-type {
+  margin-bottom: 0;
+}
+
+.profile-manage-teams-button {
+  margin-left: 50px;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 30px;
+}  
+
+.profile-team-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  padding: 10px;
+  background: #f4f6ff;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-manage-teams-button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 30px;
+}
+
+.profile-manage-teams-button:hover {
+  background-color: #0056b3;
+}
+
+/* Input fields adjustments for mobile */
+@media (max-width: 768px) {
+  .profile-form {
+    padding-left: 20px;
+  }
+
+
+  .profile-form input {
+        width: 300px;
+        margin: 5px auto; /* Center within the container */
+    }
+
+    .profile-form button {
+      width: 320px;
+      margin: 15px auto;
+    }
+
+    .profile-box {
+      width: 90%;
+      padding: 20px;
+  }
+}
+
+/* Teams section adjustments for mobile */
+@media (max-width: 768px) {
+  .profile-team-section {
+    margin-left: 0px; /* Move the section closer to the left */
+    margin-right: 1220px;
+    padding: 0; /* Remove any extra padding */
+    width: calc(100% - 30px); /* Ensure the section is responsive */
+  }
+
+  .profile-team-section h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .profile-team-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Ensure proper alignment */
+}
+
+  .profile-manage-teams-button {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    width: auto; /* Dynamic width */
+    padding: 5px 15px;
+  }
+
+  /* Ensure no other containers are interfering */
+  .profile-content, .profile-container {
+    width: 95%; /* Ensure full width on mobile */
+  }
+
+}

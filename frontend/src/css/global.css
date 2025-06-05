@@ -1,0 +1,354 @@
+/* Global dark mode for the entire app */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff !important;
+  }
+  
+/* 🌙 Theme Toggle Container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+/* Icons (Sun and Moon) */
+.icon {
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.icon.moon {
+  opacity: 1;
+}
+
+.icon.sun {
+  color: grey;
+}
+
+/* The Switch Background */
+.toggle-switch {
+  width: 50px;
+  height: 25px;
+  background-color: grey;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: background-color 0.3s ease;
+}
+
+/* The Moving Circle Inside */
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  transition: all 0.3s ease;
+}
+
+/* When Dark Mode is Active */
+.toggle-switch.dark {
+  background-color: white;
+}
+
+.toggle-switch.dark .toggle-circle {
+  left: 25px;
+  background-color: black;
+}
+
+/* Icon Opacity Adjustments */
+.toggle-switch.dark + .sun {
+  opacity: 1;
+}
+
+.toggle-switch.dark + .moon {
+  opacity: 0.3;
+}
+
+/* Apply Dark Mode Styling to the Whole Page */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
+  /* Override page-specific containers */
+  .dark-mode .dashboard-container {
+    background-color: #121212 !important;
+    color: white !important;
+  }
+  
+  
+  /* Cards (for project/bug tracking) */
+  .dark-mode .card {
+    background-color: #1e1e1e !important;
+    color: white !important;
+  }
+  
+  /* Tabs in dark mode */
+  .dark-mode .tab {
+    background-color: #222 !important;
+    color: white !important;
+  }
+    
+  /* Sidebar dark mode styling */
+  .dark-mode .sidebar {
+    background-color: #1a1a1a !important;
+  }
+  
+  /* Ensure buttons are styled for dark mode */
+  .dark-mode button {
+    color: white !important;
+  }
+
+  .dark-mode .manage-teams-button,
+  .dark-mode .create-team-button,
+  .dark-mode .logout-button
+  
+  {
+    background-color: #007bff !important;
+  }
+  
+  .dark-mode button.manage-teams-button:hover {
+    background-color: #0056b3 !important;
+  }
+
+  .dark-mode button.create-team-button:hover {
+    background-color: green !important;
+  }
+
+  .dark-mode button.logout-button:hover {
+    background-color: red !important;
+  }
+
+  /* Footer (if any) */
+  .dark-mode .footer {
+    background-color: #0056b3 !important;
+    color: white !important;
+  }
+
+  /* Prevent these classes from changing */
+.dark-mode .project-description-text,
+.dark-mode .team-name-text,
+.dark-mode .status-text,
+.dark-mode .grid,
+.dark-mode .delete-button {
+  color: #121212;
+  background-color: inherit !important; /* Keep their default background */
+  border-color: inherit !important; /* If any border styles exist */
+}
+
+.dark-mode .three-dots-menu {
+  background: transparent !important;
+  border: none !important;
+}
+
+.dark-mode .color-swatch {
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for visibility */
+  }
+
+.dark-mode .three-dots-menu button {
+  border: none !important;
+  color: #fff !important; /* Adjust text color for visibility */
+}
+
+.dark-mode .color-picker-dropdown {
+    background: #333 !important; /* Dark background */
+    border: 1px solid #555 !important; /* Darker border */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1) !important;
+  }
+
+
+.dark-mode button.delete-button {
+  background-color: #555 !important;
+}
+
+.dark-mode button.delete-button:hover {
+  background-color: red !important;
+}
+
+.dark-mode form {
+  background-color: #333;
+}
+
+.dark-mode .project-input-field, 
+.dark-mode .project-input-field-name,
+.dark-mode .project-input-field,
+.dark-mode .project-input-field-description {
+  border: 1px solid #ddd !important;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode .team-dropdown {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode .team-dropdown option {
+  color: #ffff;
+}
+
+/* project details*/
+
+.dark-mode .project-details-container
+{
+  background-color: #121212;
+}
+
+.dark-mode .project-details-wrapper,
+.dark-mode .status-section,
+.dark-mode .status-dropdown,
+.dark-mode .form-select,
+.dark-mode .bug-card {
+  background-color: #333;
+}
+
+.dark-mode .project-name,
+.dark-mode .project-description,
+.dark-mode .status-dropdown,
+.dark-mode .form-select,
+.dark-mode .bug-text {
+  color: white;
+}
+
+.dark-mode .bug-form-input {
+  border: 1px solid white !important;
+  background-color: #333;
+  color: #ffff;
+}
+
+.dark-mode .comment-textarea {
+  background-color: #333;
+  color: #ffff;
+}
+
+
+
+/* profile page */
+
+.dark-mode .profile-input-class,
+.dark-mode .profile-box,
+.dark-mode .profile-team-item {
+  background-color: #333;
+}
+
+.dark-mode .profile-input-class,
+.dark-mode .profile-header h1,
+.dark-mode .team-name,
+.dark-mode .team-description {
+  color: white;
+}
+
+/* manage teams page */
+
+.dark-mode .page-title {
+  color: white;
+}
+
+.dark-mode .team-card {
+  background: #333 !important;
+}
+
+.dark-mode .add-member-form select{
+  background-color: #333;
+  color: white;
+}
+
+/* team details */
+
+.dark-mode .teams-details-card,
+.dark-mode .teams-description,
+.dark-mode .teams-members-section,
+.dark-mode .teams-members-section li,
+.dark-mode .teams-add-member-section,
+.dark-mode .teams-add-member-section select {
+  background-color: #333;
+}
+
+.dark-mode .teams-add-member-section select,
+.dark-mode .teams-description h3,
+.dark-mode .teams-members-section h3,
+.dark-mode .teams-members-section li strong,
+.dark-mode .teams-add-member-section h3
+ {
+  color: white;
+}
+
+/*create a new team*/
+
+.dark-mode .create-teams-card {
+  background-color: #333;
+}
+
+.dark-mode .create-teams-title {
+  color: white;
+}
+
+.dark-mode .login-form {
+  background-color: #fff;
+}
+
+.dark-mode .login-input {
+  background-color: #fff !important;
+  color: #121212 !important;
+}
+
+/* footer */
+
+
+/* navbar */
+
+.dark-mode .navbar {
+  background-color: #333;
+}
+
+/* burger menu*/
+
+.dark-mode .navbar-actions {
+  background-color: #333;
+}
+
+.dark-mode .mobile-only .dashboard-button,
+.dark-mode .mobile-only .profile-button
+{
+  background-color: #007bff;
+}
+
+
+/* home page */ 
+
+.dark-mode .dashboard-container, 
+.dark-mode .register-container, 
+.dark-mode .login-container, 
+.dark-mode .landing-page {
+  background-color: white;
+}
+
+.dark-mode .contact-form-input-section {
+  background-color: #ffffff !important;
+  color: #0056b3;
+}
+
+.dark-mode .contact-form {
+  background-color: #ffffff !important;
+}
+
+.dark-mode body.register-page-body {
+  background-color: #ffffff !important;
+  background-image: radial-gradient(grey 0.4px, transparent 1px) !important;
+  background-size: 30px 35px !important;
+}
+
+.dark-mode .register-form {
+  background-color: #ffffff;
+}
+
+.dark-mode .login-link {
+  color: black;
+}

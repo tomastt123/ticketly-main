@@ -1,0 +1,127 @@
+body {
+  background-color: #ffffff; /* White background */
+  background-image: radial-gradient(grey 0.4px, transparent 1px); /* Blue dots */
+  background-size: 30px 35px; /* Adjust the distance between dots */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body.register-page-body {
+  background-color: #ffffff !important;
+  background-image: radial-gradient(grey 0.4px, transparent 1px) !important;
+  background-size: 30px 35px !important;
+}
+
+
+.register-page {
+  height: 1200px;
+}
+
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2a3f54;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    width: 21rem;
+  }
+  
+  .form-input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1rem;
+    max-width: 20rem;
+  }
+
+  .form-input-text {
+    max-width: 20rem;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+  .register-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 21.2rem;
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .success-message {
+    color: green;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .logo-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ticketly-logo-image {
+    width: 28rem;
+    height: 9rem;
+  }
+
+  @media (max-width: 768px) {
+    .google-signup {
+      width: 95%;
+      margin-left: 10px;
+    }
+
+    .register-form {
+      margin-left: 10px;
+    }
+  }
